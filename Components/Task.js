@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-const Task = () => {
+const Task = (props) => {
   return (
     <View style={styles.item}>
       <View style={styles.itemContainer}>
         <View style={styles.square}></View>
-        <Text style={styles.textContainer}> New task </Text>
+              <Text style={styles.textContainer}>{props.text}</Text>
       </View>
       <View style={styles.circular}></View>
     </View>
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     height: 15,
     borderColor: "#87ceeb",
     borderWidth: 2,
-    borderRadius: 5,
+    borderRadius: 10,
   },
 });
 export default Task;
